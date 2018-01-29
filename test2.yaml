@@ -9,6 +9,7 @@ spec:  # specification of the pod’s contents
     image: "ubuntu:14.04"
     env:
     - name: MESSAGE
-      value: kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}"
+      value: ""
     command: ["/bin/sh","-c"]
-    args: ["/bin/echo \"${MESSAGE}\""]
+    args: ["/bin/echo \"${MESSAGE=kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec.containers[*].image}"
+}\""]
