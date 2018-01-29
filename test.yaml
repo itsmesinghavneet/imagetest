@@ -49,5 +49,8 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
-          - name: IMAGE_NAME
-            valueFrom: kubectl get pods --all-namespaces -o jsonpath="{..image}" |\ tr -s '[[:space:]]' '\n' |\ sort |\ uniq -c
+          - name: IMAGE
+            valueFrom:
+              fieldRef:
+                fieldPath: ..image
+          - name:
