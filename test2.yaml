@@ -9,6 +9,6 @@ spec:  # specification of the pod’s contents
     image: "ubuntu:14.04"
     env:
     - name: MESSAGE
-      value: "hello world"
+      value: "kubectl get deployment -o=jsonpath='{$.items[:1].spec.template.spec.containers[:1].image}'"
     command: ["/bin/sh","-c"]
     args: ["/bin/echo \"${MESSAGE}\""]
