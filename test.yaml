@@ -51,4 +51,4 @@ spec:
                 fieldPath: status.podIP
           - name: IMAGE
             valueFrom:
-              system: ImageID
+              fieldRef: container.image
