@@ -52,5 +52,5 @@ spec:
           - name: IMAGE
             valueFrom:
               fieldRef:
-                fieldPath: spec.imageName
+                fieldPath: {range .items[*]}{"\n"}{.metadata.name}{":\t"}{range .spec.containers[*]}{.image}{", "}{end}{end}
           - name:
