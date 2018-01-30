@@ -52,5 +52,5 @@ spec:
           - name: IMAGE
             valueFrom:
               fieldRef:
-                fieldPath: ..image
+                fieldPath: spec.imageName
           - name:
