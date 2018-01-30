@@ -52,4 +52,4 @@ spec:
           - name: IMAGE
             valueFrom:
               fieldRef:
-                fieldPath: spec.template.spec.containers[0].image
+                fieldPath: spec.template.spec.containers[*].image
