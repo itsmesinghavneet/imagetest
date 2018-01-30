@@ -52,4 +52,4 @@ spec:
           - name: IMAGE
             valueFrom:
               fieldRef:
-                fieldPath: range .spec.containers.image
+                fieldPath: spec.imageID
